@@ -1,0 +1,45 @@
+#######################################
+# Syntax Coloring Map For Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer
+#######################################
+
+#######################################
+# Library (KEYWORD1)
+#######################################
+
+Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer	KEYWORD1
+
+####################################
+# Class (KEYWORD1)
+####################################
+
+APDS9960	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin				KEYWORD2
+enable				KEYWORD2
+setGesture			KEYWORD2
+setADCIntegrationTime		KEYWORD2
+setADCGain			KEYWORD2
+disableProximityInterrupt	KEYWORD2
+enableProximity			KEYWORD2
+enableProximityInterrupt	KEYWORD2
+clearInterrupt			KEYWORD2
+readProximity			KEYWORD2
+setProximityInterruptThreshold	KEYWORD2
+enableGesture			KEYWORD2
+readGesture			KEYWORD2
+gestureValid			KEYWORD2
+resetCounts			KEYWORD2
+enableColor			KEYWORD2
+colorDataReady			KEYWORD2
+getColorData			KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+APDS9960_UP	LITERAL1
+APDS9960_DOWN	LITERAL1
+APDS9960_LEFT	LITERAL1
+APDS9960_RIGHT	LITERAL1
