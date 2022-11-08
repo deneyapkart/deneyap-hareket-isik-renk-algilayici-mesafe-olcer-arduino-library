@@ -1,4 +1,4 @@
-# Deneyap Gesture, Color, Proximity Sensor APDS9960 Arduino Library
+# Deneyap Gesture, Color, Proximity Sensor Arduino Library
 [FOR TURKISH VERSION](docs/README_tr.md) ![trflag](https://github.com/deneyapkart/deneyapkart-arduino-core/blob/master/docs/tr.png)
 
 ***** Add photo ****
@@ -9,7 +9,7 @@ Arduino library for Deneyap Gesture, Color, Proximity Sensor APDS9960
 - `Product ID` **M25** , **mpv1.0**
 - `MCU` APDS-9960
 - `Weight` 
-- `Module Dimension`
+- `Module Dimension` 25,4 mm x 25,4 mm
 - `I2C address` 0x39
 
 | Address |  | 
@@ -17,9 +17,13 @@ Arduino library for Deneyap Gesture, Color, Proximity Sensor APDS9960
 | 0x39 | default address |
 
 ## :closed_book:Documentation
-Deneyap Gesture, Color, Proximity Sensor APDS9960
+[Deneyap Gesture, Color, Proximity Sensor](https://docs.deneyapkart.org/en/content/contentDetail/deneyap-modul-deneyap-hareket-isk-renk-alglayc-ve)
 
-APDS9960-datasheet
+[Deneyap Gesture, Color, Proximity Sensor Shematic](https://cdn.deneyapkart.org/media/upload/userFormUpload/siVrurpuG9sb9DMKQPnCD6H5vYXWXsD0.pdf)
+
+[Deneyap Gesture, Color, Proximity Sensor Mechanical Drawing](https://cdn.deneyapkart.org/media/upload/userFormUpload/Zi33d127Omdb0DTZ2rR3EvV1uwp4Ul5j.pdf)
+
+[APDS-9960_datasheet](https://docs.broadcom.com/doc/AV02-4191EN)
 
 [How to install a Arduino Library](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)
 
@@ -34,6 +38,8 @@ This Arduino library allows you to use Deneyap Gesture, Color, Proximity Sensor 
 - `library.properties ` General library properties for the Arduino package manager
 
 ## Version History
+1.0.1 - updated funtion(enableGesture) and comment line in examples
+
 1.0.0 - initial release
 
 ## :rocket:Hardware Connections

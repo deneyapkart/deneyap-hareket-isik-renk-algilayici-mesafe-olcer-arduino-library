@@ -2,15 +2,15 @@
 *****************************************************************************
 @file         Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer.h
 @mainpage     Deneyap Gesture, Color, Proximity Sensor Arduino library header file
-@version      v1.0.0
-@date         June 22, 2022
+@version      v1.0.1
+@date         November 08, 2022
 @brief        This file contains all function prototypes and macros
               for Deneyap Gesture, Color, Proximity Sensor Arduino library
 *****************************************************************************
 */
 
-#ifndef _APDS9960_H_
-#define _APDS9960_H_
+#ifndef _DENEYAP_HAREKETISIKRENKALGILAYICIMESAFEOLCER_H_
+#define _DENEYAP_HAREKETISIKRENKALGILAYICIMESAFEOLCER_H_
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -268,4 +268,4 @@ private:
     };
     gconf3 _gconf3;
 };
-#endif
+#endif /* __DENEYAP_HAREKETISIKRENKALGILAYICIMESAFEOLCER__H */

@@ -1,13 +1,13 @@
 /*
 *****************************************************************************
 @file         Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer.cpp
-@mainpage     Deneyap Gesture, Color, Proximity Sensor APDS9960 Arduino 
+@mainpage     Deneyap Gesture, Color, Proximity Sensor Arduino 
               library source file
 @maintainer   RFtek Electronics <techsupport@rftek.com.tr>
-@version      v1.0.0
-@date         June 27, 2022
+@version      v1.0.1
+@date         November 08, 2022
 @brief        Includes functions to control Deneyap Gesture, Color, Proximity 
-              Sensor APDS9960 Arduino library
+              Sensor Arduino library
 
 Library includes:
 --> Configuration functions
@@ -65,6 +65,7 @@ void APDS9960::enable(boolean en) {
  * @retval  None
  **/
 void APDS9960::enableGesture(boolean en) {
+    enableProximity(true);
     _enable.GEN = en;
     write8(APDS9960_ENABLE, _enable.get());
     resetCounts();

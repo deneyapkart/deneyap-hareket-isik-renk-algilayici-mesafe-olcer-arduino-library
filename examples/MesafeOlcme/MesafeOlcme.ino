@@ -1,34 +1,32 @@
 /*
  *   Yakınlık Ölçme örneği,
- *
  *   Bu örnekte temel konfigürasyon ayarları yapılmaktadır.
- *   Sensörden yakın mesafe yakınlık verilerini okumaktadır ve 500 milisaniyede bir yakınlık değerini seri terminale yazdırmaktadır.
+ *   Deneyap Hareket, Işık, Renk Algılayıcı, Mesafe Ölçer Algılayıcısından yakın mesafe yakınlık verilerini okumaktadır ve okunan yakınlık değerini seri port ekranına yazdırmaktadır.
  *
- *   Bu algılayıcı I2C haberleşme protokolü ile çalışmaktadır.
- *
+ *   Bu algılayıcı I2C haberleşme protokolü ile çalışmaktadır. 
+ *  
  *   Bu kütüphane örneği Deneyap Hareket, Işık, Renk Algılayıcı, Mesafe Ölçer Algılayıcısı için oluşturulmuştur.
- *      ------>  www.....com <------ //docs
- *      ------>  https://github.com/deneyapkart/deneyap-hareket-isik-renk-algilayici-mesafe-olcer-arduino-library  <------ 
- */
-#include <Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer.h>       //Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer.h kütüphanesi eklendi
+ *      --->  https://docs.deneyapkart.org/tr/content/contentDetail/deneyap-modul-deneyap-hareket-isk-renk-alglayc-ve <---
+ *      --->  https://github.com/deneyapkart/deneyap-hareket-isik-renk-algilayici-mesafe-olcer-arduino-library  <--- 
+*/
+#include <Deneyap_HareketIsikRenkAlgilayiciMesafeOlcer.h>       // Deneyap Hareket, Işık, Renk Algılayıcı, Mesafe Ölçer Algılayıcısı kütüphanesi eklenmesi 
 
 APDS9960 Yakinlik;                                              // APDS9960 için class tanımlanması
 
 void setup() {
-    Serial.begin(115200);                                       // Seri haberleşme başlatıldı
-    if (!Yakinlik.begin(0x39)) {                                // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
+    Serial.begin(115200);                                       // Seri haberleşme başlatılması
+    if (!Yakinlik.begin(0x39)) {                                // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
         delay(3000);
-        Serial.println("APDS-9960 I2C bağlantısı başarısız ");  // I2C bağlantısı başarısız olursa seri terminale yazdırıldı
+        Serial.println("I2C bağlantısı başarısız");             // I2C bağlantısı başarısız olursa seri port ekranına yazdırılması
     }
-    Yakinlik.enableProximity(true);                             // yakınlık ölçüm aktifleştirildi
+    Yakinlik.enableProximity(true);                             // Yakınlık ölçüm aktifleştirilmesi
 }
 
 void loop() {
-    /*  mesafe sonucları
-        - 0   => yakın
-        - 255 => uzak
-        - -1  => hata   */
+    /*  255 => yakın
+        0   => uzak
+        -1  => hata   */
     Serial.print("yakınlık :");
-    Serial.println(Yakinlik.readProximity());                  //ölçüm yapılıyor ve seri terminale veri gönderiliyor
+    Serial.println(Yakinlik.readProximity());                  // Okunan yakınlık değerinin seri port ekranına yazdırılması
     delay(500);
 }
